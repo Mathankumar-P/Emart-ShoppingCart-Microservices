@@ -7,6 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class ProductRequest {
     private String productName;
-    private Long price;
-    private Long quantity;
+    private long price;
+    private long quantity;
 }

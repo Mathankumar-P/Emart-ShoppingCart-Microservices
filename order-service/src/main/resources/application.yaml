@@ -7,16 +7,20 @@ spring:
     password: root
   application:
     name: ORDER-SERVICE
+  cloud:
+    config:
+      uri: optional:http://localhost:9296/
+
   jpa:
      database-platform: org.hibernate.dialect.MySQLDialect
      hibernate:
        ddl-auto: update
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
